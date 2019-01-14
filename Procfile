@@ -1,1 +1,1 @@
-web: gunicorn binomial3:server
+web: gunicorn dash_visualize_brandprediction:server
