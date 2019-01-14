@@ -1,6 +1,6 @@
 # Predicting a beauty brand from its title -> Visualizing with Dash Plotly
 
-Using  sklearn to vectorize beauty product titles and predicting its brand using SGD.
+Using sklearn to vectorize beauty product titles and predicting its brand using SGD.
 
 The top 3  most likely brands are visualized using Dash Plotly to build a Flask app with Python only.
 
