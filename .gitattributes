@@ -1,3 +1,4 @@
+# need to add this, so git recognizes this repo as Python
 assets/* linguist-vendored
 * linguist-vendored
 *.py linguist-vendored=false
