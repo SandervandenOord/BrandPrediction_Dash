@@ -1,5 +1,6 @@
 import dash_html_components as html
 
+
 def column(children, style={}, className='five columns'):
     """"Convenience function to return a column style html.Div. It uses
     a custom css determining the width of the columns based on the className.
