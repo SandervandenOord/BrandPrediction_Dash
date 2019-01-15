@@ -1,1 +1,1 @@
-web: gunicorn dash_visualize_brandprediction:server
+web: gunicorn brand_prediction_app:server

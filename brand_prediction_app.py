@@ -4,9 +4,8 @@ from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
 
-from dash_utils import row, column
-
-import prediction_utils
+from utils import prediction_utils
+from utils.dash_utils import row
 
 
 app = dash.Dash(__name__)
@@ -15,7 +14,7 @@ server = app.server
 
 colors = {
     'background': 'white',
-    'text': 'blue'
+    'text': 'blue',
 }
 
 app.layout = html.Div(
@@ -29,7 +28,13 @@ app.layout = html.Div(
         row([
             html.Br(),
             html.Label('Type a Beauty product title:'),
-            dcc.Input(id='beauty_title', value='LOréal Paris X Isabel Marant Lippenstift - Limited Edition - 06 La Seine Shadow', type='text', size=100, minlength=5),
+            dcc.Input(
+                id='beauty_title',
+                value='LOréal Paris X Isabel Marant Lippenstift - Limited Edition - 06 La Seine Shadow',
+                type='text',
+                size=100,
+                minlength=5,
+            ),
         ]),
 
 
@@ -37,8 +42,8 @@ app.layout = html.Div(
             dcc.Graph(
                 id='beauty_graph',
                 config={
-                    'displaylogo': False,  #dont show plotly logo
-                    'modeBarButtonsToRemove': ['pan2d', 'lasso2d'],  #dont show certain options in plotly menu
+                    'displaylogo': False,  # don't show plotly logo
+                    'modeBarButtonsToRemove': ['pan2d', 'lasso2d'],  # don't show certain options in plotly menu
                 },
             ),
         ]),
